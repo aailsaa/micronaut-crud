@@ -1,12 +1,13 @@
 name: Build & Test after Merge
-
 on:
-  push:
+  pull_request:
+    types: [closed]
     branches:
       - main
 
 jobs:
   build:
+    if: github.event.pull_request.merged == true
     name: Build and Test
     runs-on: ubuntu-latest
 
