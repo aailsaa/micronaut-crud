@@ -32,6 +32,10 @@ dependencies {
 
     // yaml instead of properties
     runtimeOnly("org.yaml:snakeyaml")
+
+    // db
+    testImplementation("com.h2database:h2")
+
 }
 
 
